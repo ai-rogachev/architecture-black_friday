@@ -65,6 +65,3 @@ print("Total documents: " + db.helloDoc.countDocuments());
 ' || echo "Sample data already exists"
 
 echo "MongoDB Sharded Cluster initialization complete!"
-echo "Cluster status:"
-mongosh --host mongos_router:27020 --eval 'sh.status()'
-
