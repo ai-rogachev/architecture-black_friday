@@ -62,7 +62,7 @@
 
 ### 2. Shard 1 (`mongo-shard1`)
 - **Port:** 27018
-- **Role:** Хранит партиционированняе данные - часть 1.
+- **Role:** Основной узел шарда 1, обрабатывает запросы на чтение и запись.
 - **Replica Set:** `shard1`
 
 #### 2.2. Secondary Node 1 (`mongo-shard1-repl1`)
@@ -76,7 +76,9 @@
 - **Volume:** `shard1-data-repl2`
 
 ### 3. Shard 2 Replica Set
-Replica Set Name: `shard2`
+- **Port:** 27019
+- **Role:** Основной узел шарда 2, обрабатывает запросы на чтение и запись.
+- **Replica Set:** `shard2`
 
 #### 3.1. Primary Node (`mongo-shard2`)
 - **Port:** 27019
