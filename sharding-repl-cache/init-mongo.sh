@@ -63,13 +63,13 @@ sh.shardCollection("somedb.helloDoc", { name: "hashed" });
 echo "Inserting Sample Data..."
 mongosh --host mongos_router:27020 --eval '
 const db = db.getSiblingDB("somedb");
-for (let i = 0; i < 10000; i++) {
+for (let i = 0; i < 2000; i++) {
   db.helloDoc.insertOne({
     age: Math.floor(Math.random() * 100),
     name: "name_" + i
   });
 }
-print("Inserted 10000 documents");
+print("Inserted 2000 documents");
 print("Total documents: " + db.helloDoc.countDocuments());
 ' || echo "Sample data already exists"
 
