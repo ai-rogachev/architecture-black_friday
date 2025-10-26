@@ -1,1 +1,3 @@
 venv
+/_example_*
+*.drawio.bkp
